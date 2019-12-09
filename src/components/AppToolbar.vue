@@ -89,7 +89,7 @@ export default {
       if (val.length > 2) {
         setTimeout(() => {
           val && val !== this.select && this.querySelector()
-        }, 1000)        
+        }, 1000)
       }
     }
   },
@@ -105,7 +105,8 @@ export default {
             type: data.type
           }
         }) // falta agregar otro parametro de filtrado 'ad' para abarcas mas empresas
-        this.items = infoData.filter(data => data.type === 'cs')
+        this.items = infoData // .filter(data => data.type === 'cs')
+        // console.log(infoData) // eslint-disable-line no-console
       }).catch( error => { // eslint-disable-line no-console
         console.log(error) // eslint-disable-line no-console
       }).finally(() => (this.loading = false))
